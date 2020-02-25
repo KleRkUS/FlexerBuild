@@ -1,6 +1,6 @@
 const buttonPhone = document.getElementById('form__phone__button');
 
-buttonPhone.onclick = () => {
+buttonPhone.onclick = function() {
   let check = checkPhone(document.getElementById('form__phone__input').value);
   if (check == null) {
     alert('Phone is invalid');
@@ -60,17 +60,17 @@ function validateCaptcha() {
 
 async function sendRequest() {
 
-  let promise = await fetch('/', {
+  await fetch('/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
     },
-    body: JSON.stringify(document.getElementById('form__phone__input').value);
-  }.then(res) => {
-    alert('Thank you!');
-  }.catch(err) => {
-    console.log(err);
-    alert('Sorry! Something went wrong.');
-  });
+    body: JSON.stringify(document.getElementById('form__phone__input').value)
+  }).then(res => {
+      alert('Thank you!');
+    }).catch(err => {
+      console.log(err);
+      alert('Sorry! Something went wrong.');
+    });
 
 }

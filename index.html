@@ -8,62 +8,56 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>FLEXER</title>
-    <style>
-        .slick-list {display: flex;}
-        .slick-track {margin-top: auto;margin-bottom: auto;outline: none;}
-    </style>
 </head>
 <body>
     <main id="main">
         <section class="header">
             <img src="assets/images/header_logo.png" alt="FLEXER" class="header__logo">
         </section>
-        <section class="slickslider slides">
-            <div class="wrapper" style="width: 100vw;">
-                <div class="slide">
-                    <div class="slide--left">
-                        <h2 class="slide--left__text">Desktop <i>Streaming</i> + <i>Editing</i><br>assistant for Windows</h2>
-                        <a class="first--left__button btn">Download</a>
-                    </div>
-                    <div class="slide--right">
-                        <img src="assets/images/Macbook_Pro.png" alt="">
-                    </div>
+        <div class="slides--wrapper">
+        <div class="slides--buttons" data-direction="left"><</div><!--
+        --><section class="slides">
+            <div class="slides--inner" id="slides--inner">
+            <div class="slides--first first slide">
+                <div class="first--left slide--left">
+                    <h2 class="first--left__text slide--left-text">Desktop <i>Streaming</i> + <i>Editing</i><br>assistant for Windows</h2>
+                    <a class="first--left__button btn">Download</a>
+                </div><!--
+                --><div>
+                    <img src="assets/images/Macbook_Pro.png" alt="" class="first--right">
+                </div>
+            </div><!--
+            --><div class="slides--second second slide">
+                <div class="second--left slide--left">
+                    <h2 class="second--left__text slide--left-text">Professional <i>Easy-to-Use</i><br>video editor</h2>
+                    <a class="second--left__button btn">Download</a>
+                </div><!--
+                --><div>
+                    <img src="assets/images/app_profile_mockup.png" alt="" class="second--right">
+                </div>
+            </div><!--
+            --><div class="slides--third third slide">
+                <div class="third--left slide--left">
+                    <h2 class="third--left__text slide--left-text">Introducing:<br><i>Horizontal NewsFeed!</i></h2>
+                    <a class="third--left__button btn">Download</a>
+                </div><!--
+                --><div>
+                    <img src="assets/images/vertical_feed_mockup.png" alt="" class="third--right">
+                </div>
+            </div><!--
+            --><div class="slides--fourth fourth slide">
+                <div class="fourth--left slide--left">
+                    <h2 class="fourth--left__text slide--left-text">The first-ever social network<br><i>exclusively for gamers</i></h2>
+                    <a class="fourth--left__button btn">Download</a>
+                </div><!--
+                --><div>
+                    <img src="assets/images/app_profile_mockup_second.png" alt="" class="fourth--right">
                 </div>
             </div>
-            <div class="wrapper">
-                <div class="slides--second">
-                    <div class="slide--left">
-                        <h2 class="slide--left__text">Professional <i>Easy-to-Use</i><br>video editor</h2>
-                        <a class="slide--left__button btn">Download</a>
-                    </div>
-                    <div class="partial--right">
-                        <img src="assets/images/app_profile_mockup.png" alt="">
-                    </div>
-                </div>
             </div>
-            <div class="wrapper">
-                <div class="slide">
-                    <div class="slide--left">
-                        <h2 class="slide--left__text">Introducing:<br><i>Horizontal NewsFeed!</i></h2>
-                        <a class="slide--left__button btn">Download</a>
-                    </div>
-                    <div class="third--right">
-                        <img src="assets/images/vertical_feed_mockup.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper">
-                <div class="slides--second">
-                    <div class="slide--left">
-                        <h2 class="slide--left__text">The first-ever social network<br><i>exclusively for gamers</i></h2>
-                        <a class="slide--left__button btn">Download</a>
-                    </div>
-                    <div class="partial--right">
-                        <img src="assets/images/app_profile_mockup_second.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
+        </section><!--
+            --><div class="slides--buttons" data-direction="right">></div>
+        </div>
     </main>
     <section class="download">
         <h2 class="download__title"><i>Download</i></h2>
@@ -117,8 +111,6 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
-    <script src="js/slick.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/captcha.js"></script>
 </body>
 </html>

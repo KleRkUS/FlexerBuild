@@ -54,48 +54,68 @@ main {
   outline: none;
 }
 
-.slides {
+.slides--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  display: flex;
-  margin: auto;
-}
-.slides--second {
-  width: 55%;
-  display: flex;
-  margin: auto;
 }
 
-.partial--right {
-  margin: auto auto auto 40px;
+.slides {
+  width: 84%;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.partial--right img {
-  height: 40em;
+
+.slides--buttons {
+  width: 8%;
+  text-align: center;
+  font-size: 3em;
+}
+
+.slides--inner {
+  display: inline-block;
+  overflow: hidden;
+  width: 400%;
+  position: relative;
+  transition: all ease-in-out 0.2s;
 }
 
 .slide {
-  width: 80%;
-  display: flex;
-  margin: auto;
+  width: 25%;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  align-content: center;
 }
-.slide--left__text {
-  margin-bottom: 1.8em;
-  margin-top: 0;
-  font-size: 2em;
+.slide div {
+  vertical-align: middle;
+  display: inline-block;
+  box-sizing: border-box;
 }
-.slide--left {
+.slide div:first-child {
+  padding-right: 1em;
   text-align: right;
-  margin: auto;
+  width: 50%;
 }
-.slide--right {
-  margin: auto auto auto 40px;
+.slide div:last-child {
+  padding-left: 1em;
+  text-align: center;
+  width: 50%;
 }
-.slide--right img {
-  height: 25em;
+.slide div:last-child img {
+  width: 50%;
+}
+.slide:nth-child(2n+1) div:last-child img {
+  width: 100%;
 }
 
-.third--right {
-  margin: auto auto auto 40px;
+.slide--left-text {
+  margin-bottom: 1.5em;
+  margin-top: 0;
+  font-size: 2em;
 }
 
 .link {
@@ -238,63 +258,18 @@ a.link-inactive {
   .partial--right img {
     height: 550px;
   }
-
-  .slide--left__text {
-    font-size: 1.5em;
-  }
 }
 @media screen and (max-width: 1390px) {
-  .slides--second {
-    width: 70%;
-  }
-
   .partial--right {
     margin: auto auto auto 20px;
   }
   .partial--right img {
     height: 28em;
   }
-
-  .slide {
-    width: 90%;
-  }
-  .slide--right {
-    margin: auto auto auto 20px;
-  }
-  .slide--right img {
-    width: 30em;
-    height: 18em;
-  }
-
-  .third--right {
-    margin: auto auto auto 20px;
-  }
-  .third--right img {
-    width: 30em;
-  }
 }
 @media screen and (max-width: 960px) {
-  .slides--second {
-    width: 80%;
-  }
-
   .partial--right img {
     height: 22em;
-  }
-
-  .slide {
-    width: 90%;
-  }
-  .slide--left__text {
-    font-size: 1.2em;
-  }
-  .slide--right img {
-    width: 22em;
-    height: 12em;
-  }
-
-  .third--right img {
-    width: 20em;
   }
 
   .btn {
@@ -318,17 +293,6 @@ a.link-inactive {
     padding: 1em 1.5em;
   }
 
-  .slides {
-    display: flex;
-    margin: auto;
-  }
-  .slides--second {
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    margin: auto;
-  }
-
   .partial--right {
     margin: auto;
     margin-bottom: 40px;
@@ -337,36 +301,22 @@ a.link-inactive {
     height: 30em;
   }
 
-  .slide {
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    margin: auto;
+  .slide div {
+    display: block;
+    width: 100% !important;
   }
-  .slide--left__text {
-    margin-bottom: 1.8em;
-    margin-top: 0;
-    font-size: 1.5em;
+  .slide .slide--left {
+    text-align: center !important;
+    margin-bottom: 3em;
   }
-  .slide--left {
+  .slide .slide--left h2 {
     text-align: center;
-    margin: auto;
+    font-size: 2.5em;
   }
-  .slide--right {
-    margin: auto;
-    margin-bottom: 40px;
-  }
-  .slide--right img {
-    height: 22em;
-    width: 34em;
-  }
-
-  .third--right {
-    margin: auto;
-    margin-bottom: 40px;
-  }
-  .third--right img {
-    width: 30em;
+  .slide .slide--left a {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 2em;
   }
 
   .download--blocks {

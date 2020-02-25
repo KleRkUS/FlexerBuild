@@ -53,40 +53,62 @@ main
     outline: none
 
 
-.slides
-    width: 100%
-    height: 100%
-    display: flex
-    margin: auto
-    &--second
-        width: 55%
-        display: flex
-        margin: auto
+.slides--wrapper 
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
 
-.partial
-    &--right
-        margin: auto auto auto 40px
-        img
-            height: 40em
 
-.slide
-    width: 80%
-    display: flex
-    margin: auto
-    &--left__text
-        margin-bottom: 1.8em
-        margin-top: 0
-        font-size: 2em
-    &--left
-        text-align: right
-        margin: auto
-    &--right
-        margin: auto auto auto 40px
-        img
-            height: 25em
-.third
-    &--right
-        margin: auto auto auto 40px     
+.slides 
+  width: 84%
+  display: inline-block
+  box-sizing: border-box
+  overflow: hidden    
+
+.slides--buttons
+    width: 8% 
+    text-align: center
+    font-size: 3em 
+
+.slides--inner 
+  display: inline-block
+  overflow: hidden
+  width: 400%
+  position: relative
+  transition: all ease-in-out .2s
+
+
+.slide 
+  width: 25%
+  display: inline-block
+  margin: 0
+  vertical-align: middle
+  align-content: center
+  div
+    vertical-align: middle
+    display: inline-block
+    box-sizing: border-box
+  div:first-child 
+    padding-right: 1em
+    text-align: right
+    width: 50%
+  div:last-child 
+    padding-left: 1em
+    text-align: center
+    width: 50%
+    img 
+      width: 50%
+  &:nth-child(2n+1)
+    div:last-child 
+      img 
+        width: 100%
+
+.slide--left-text 
+  margin-bottom: 1.5em
+  margin-top: 0
+  font-size: 2em
 
 .link
     border: 1px solid #fff
@@ -205,59 +227,23 @@ a.link-inactive
         &--right
             img
                 height: 550px
-    .slide
-        &--left
-            &__text
-                font-size: 1.5em 
 
 @media screen and ( max-width: 1390px )
-    .slides
-        &--second
-            width: 70%
 
     .partial
         &--right
             margin: auto auto auto 20px
             img
                 height: 28em
-
-    .slide
-        width: 90%
-        &--right
-            margin: auto auto auto 20px
-            img
-                width: 30em
-                height: 18em
-    .third
-        &--right
-            margin: auto auto auto 20px
-            img
-                width: 30em    
+  
 
 @media screen and ( max-width: 960px )
 
-    .slides
-        &--second
-            width: 80%
 
     .partial
         &--right
             img
                 height: 22em
-
-    .slide
-        width: 90%
-        &--left
-            &__text
-                font-size: 1.2em 
-        &--right
-            img
-                width: 22em
-                height: 12em
-    .third
-        &--right
-            img
-                width: 20em
     
     .btn
         padding: 0.7em 1em
@@ -278,14 +264,6 @@ a.link-inactive
     .btn
         padding: 1em 1.5em
     
-    .slides
-        display: flex
-        margin: auto
-        &--second
-            width: 100%
-            display: flex
-            flex-direction: column-reverse
-            margin: auto
 
     .partial
         &--right
@@ -293,31 +271,21 @@ a.link-inactive
             margin-bottom: 40px
             img
                 height: 30em
-
+    
     .slide
-        width: 100%
-        display: flex
-        flex-direction: column-reverse
-        margin: auto
-        &--left__text
-            margin-bottom: 1.8em
-            margin-top: 0
-            font-size: 1.5em
-        &--left
-            text-align: center
-            margin: auto
-        &--right
-            margin: auto
-            margin-bottom: 40px
-            img
-                height: 22em
-                width: 34em
-    .third
-        &--right
-            margin: auto
-            margin-bottom: 40px
-            img
-                width: 30em
+        div
+            display: block
+            width: 100%!important 
+        .slide--left
+            text-align: center!important
+            margin-bottom: 3em
+            h2
+                text-align: center
+                font-size: 2.5em 
+            a
+                display: inline-block
+                margin: 0 auto 
+                font-size:  2em 
 
     .download
         &--blocks
