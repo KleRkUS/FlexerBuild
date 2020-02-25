@@ -1,0 +1,383 @@
+$background-color: #080A0F;
+$grey-color: #989898;
+$phone-input-color: #CECECE;
+$button-gradient: linear-gradient(to bottom, #E56A41, #E79D4D);
+$contrast-color: #F67741;
+$filter-gradient: linear-gradient(to bottom, transparent, #0C0F14);
+
+body
+    margin: 0
+    font-size: 16px
+    color: #fff
+    background: $background-color
+
+h2, h3, .btn, p, a, input
+    font-family: "Montserrat", sans-serif
+    font-weight: 600
+    text-decoration: none
+    color: #fff
+
+i
+    font-style: normal
+    text-decoration: underline
+    text-decoration-color: $contrast-color
+
+main
+    background: url('../assets/images/image_BG.png') no-repeat
+    background-size: cover
+    width: 100%
+    height: 100vh
+
+.header
+    padding-top: 2em
+    padding-left: 2.5em
+    &__logo
+        height: 2.3em
+        width: 12em
+
+.btn
+    color: #fff
+    background: $button-gradient
+    border-radius: .5em
+    padding: 1em 1.5em
+    cursor: pointer
+
+.annotation_grey
+    text-align: left
+    color: $grey-color
+    font-size: .7em
+    margin-top: .5em
+
+.wrapper
+    margin: auto
+    outline: none
+
+
+.slides
+    width: 100%
+    height: 100%
+    display: flex
+    margin: auto
+    &--second
+        width: 55%
+        display: flex
+        margin: auto
+
+.partial
+    &--right
+        margin: auto auto auto 40px
+        img
+            height: 40em
+
+.slide
+    width: 80%
+    display: flex
+    margin: auto
+    &--left__text
+        margin-bottom: 1.8em
+        margin-top: 0
+        font-size: 2em
+    &--left
+        text-align: right
+        margin: auto
+    &--right
+        margin: auto auto auto 40px
+        img
+            height: 25em
+.third
+    &--right
+        margin: auto auto auto 40px     
+
+.link
+    border: 1px solid #fff
+    border-radius: .3em
+    padding: .7em 1.2em
+    height: 50px
+    &--descrpition
+        color: #fff
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__img
+        vertical-align: middle
+        margin-right: 0.9em
+        width: 2em
+    &__get
+        font-size: .8em
+        margin: 0
+    &__where
+        font-size: 1.4em
+        margin: 0
+    &__text
+        margin: .9em 0
+    &--android
+        border: 1px solid #989898
+
+.android
+    color: #989898
+    font-size: 1.1em
+
+.download
+    &__title
+        font-size: 40px
+        text-align: center
+        margin: 4em 0 2em 0
+    &--blocks
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: center
+        flex-wrap: wrap
+        &__title
+            text-align: center
+    &--block
+        width: 250px
+        margin-left: 60px
+        &:first-child
+            margin-left: 0
+        a
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            img
+                margin-right: 20px
+
+.footer
+    display: flex
+    align-items: center
+    margin: 8em 0
+    div 
+        width: 50%
+        padding: 0 10%
+        box-sizing: border-box
+    div:first-child 
+        text-align: center
+    div:last-child 
+        text-align: right
+        display: flex
+        flex-direction: column
+    &--phone
+        &__form
+            width: 25em
+            display: flex
+            input:first-child 
+                width: 80%
+                color: #000
+                outline: none
+            input:last-child 
+                width: 20%
+                outline: none
+        &__text
+            margin-top: 0
+            width: 17em
+            text-align: left
+            font-size: 1.5em
+    &--links
+        a
+            font-weight: 400
+            color: #fff
+            text-decoration: none
+            margin: .7em 0
+
+.btn-phone 
+    border: none
+
+.form__phone 
+    margin-right: -1em
+    border-radius: .5em
+    border: none
+    background: $phone-input-color
+    padding-left: 1.5em
+
+
+a.link-inactive 
+    border-color: $grey-color
+    color: $grey-color    
+
+@media screen and ( max-width: 1575px )
+    .partial
+        &--right
+            img
+                height: 550px
+    .slide
+        &--left
+            &__text
+                font-size: 1.5em 
+
+@media screen and ( max-width: 1390px )
+    .slides
+        &--second
+            width: 70%
+
+    .partial
+        &--right
+            margin: auto auto auto 20px
+            img
+                height: 28em
+
+    .slide
+        width: 90%
+        &--right
+            margin: auto auto auto 20px
+            img
+                width: 30em
+                height: 18em
+    .third
+        &--right
+            margin: auto auto auto 20px
+            img
+                width: 30em    
+
+@media screen and ( max-width: 960px )
+
+    .slides
+        &--second
+            width: 80%
+
+    .partial
+        &--right
+            img
+                height: 22em
+
+    .slide
+        width: 90%
+        &--left
+            &__text
+                font-size: 1.2em 
+        &--right
+            img
+                width: 22em
+                height: 12em
+    .third
+        &--right
+            img
+                width: 20em
+    
+    .btn
+        padding: 0.7em 1em
+
+    .download
+        &--blocks
+            width: 85%
+            margin: 0 auto
+        &--block
+            &:last-child
+                margin-left: 0
+
+
+@media (max-width: 700px) 
+    body 
+        font-size: 12px
+
+    .btn
+        padding: 1em 1.5em
+    
+    .slides
+        display: flex
+        margin: auto
+        &--second
+            width: 100%
+            display: flex
+            flex-direction: column-reverse
+            margin: auto
+
+    .partial
+        &--right
+            margin: auto
+            margin-bottom: 40px
+            img
+                height: 30em
+
+    .slide
+        width: 100%
+        display: flex
+        flex-direction: column-reverse
+        margin: auto
+        &--left__text
+            margin-bottom: 1.8em
+            margin-top: 0
+            font-size: 1.5em
+        &--left
+            text-align: center
+            margin: auto
+        &--right
+            margin: auto
+            margin-bottom: 40px
+            img
+                height: 22em
+                width: 34em
+    .third
+        &--right
+            margin: auto
+            margin-bottom: 40px
+            img
+                width: 30em
+
+    .download
+        &--blocks
+            width: 70%
+            margin: 0 auto
+        &--block
+            margin-left: 0
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+    .footer
+        display: flex
+        flex-direction: column
+        div 
+            width: 100%
+            padding: 0 10%
+            box-sizing: border-box
+            align-items: center
+        div:last-child
+            display: flex
+            flex-direction: column
+        &--phone
+            &__form
+                width: 25em
+                display: flex
+                margin: 0 auto 40px auto
+                input:first-child 
+                    width: 80%
+                input:last-child 
+                    width: 30%
+            &__text
+                margin: 0 auto 20px auto
+                width: 17em
+                text-align: center
+                font-size: 1.5em
+        &--links
+            a
+                font-weight: 400
+                color: #fff
+                text-decoration: none
+                font-size: 1.3em
+
+@media screen and ( max-width: 500px )
+    .partial
+        &--right
+            img
+                height: 20em
+
+    .slide
+        &--right
+            img
+                height: 15em
+                width: 25em
+    .third
+        &--right
+            img
+                width: 20em
+
+@media screen and ( max-width: 400px )
+    .footer
+        margin-bottom: 4em
+        &--phone
+            &__text
+                font-size: 1.25em
+            &__form
+                width: 20em
+    
+    
