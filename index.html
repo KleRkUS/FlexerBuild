@@ -101,8 +101,14 @@
         <div class="footer--phone">
             <h2 class="footer--phone__text">Text yourself a link to FLEXER!</h2>
             <form action="" class="footer--phone__form form">
-                <input type="text" value="" class="form__phone">
-                <input type="button" value="Send!" class="btn btn-phone">
+                <input type="text" value="" class="form__phone" id="form__phone__input">
+                <input type="button" value="Send!" class="btn btn-phone" id="form__phone__button">
+            </form>
+            <form onsubmit="validateCaptcha()" id="captcha_box" style="display: none">
+                <div id="captcha">
+                </div>
+                <input type="text" placeholder="Captcha" id="cpatchaTextBox"/>
+                <button type="submit">Submit</button>
             </form>
         </div>
         <div class="footer--links">
@@ -113,5 +119,6 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script src="js/slick.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/captcha.js"></script>
 </body>
 </html>
